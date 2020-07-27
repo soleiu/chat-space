@@ -1,0 +1,26 @@
+
+.Main-chat
+  .Main-chat__Right-header
+    .Main-chat__Right-header__groupname
+      techchamp
+      .Main-chat__Right-header__memberlist
+        sample
+    .Right-header__editbutton
+      Edit
+  .Main-chat__messagebox
+    .Main-chat__messagebox__info
+      .Main-chat__messagebox__info__username
+        sample
+      .Main-chat__messagebox__info__date
+        2020.7.30
+    .Main-chat__messagebox__info__content
+      Hello
+      
+  .Main-chat__footer
+    %form.Form__contents
+      .Form__inputbox
+        %input.Form__inputtext{"placeholder": "type a message", "type": "text"}
+        %label.Form__inputimage{"placeholder": "type a text", "type": "text"}
+          = icon('fas', 'image', class: "Contents__btn--icon")
+          %input{ "type": "file",class:"A"}
+      %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
