@@ -24,11 +24,3 @@
           = icon('fas', 'image', class: "Contents__btn--icon")
           %input{ "type": "file",class:"A"}
       %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
-
-    -# = form_for [@group, @message] do |f|
-      -#  = f.text_field :content, class: 'box__text' , placeholder: 'type a message'
-      -#  = f.label :image 
-      -#    = f.file_field, image, class: 'box__file-btn'
-      -#      %span class: 'box__icon'
-      -#      =icon('fas', 'image',class:'icon')
-      -#    = f.submit 'Send', class: 'send-btn'
