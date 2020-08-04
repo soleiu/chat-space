@@ -9,6 +9,7 @@
             = icon('fas', 'edit', class: "Side-list__edit")
           = link_to edit_user_path(current_user),class: "Side-list__iconlist" do
             = icon('fas', 'cog', class: "Side-list__cog")
+          
     .Side-group
       - current_user.groups.each do |group|
         .Group
