@@ -5,14 +5,17 @@
         .Side-list__usernames
           = current_user.name
         .Side-list__iconlist
-          = link_to "#" ,class: "Side-list__iconlist" do
+          = link_to new_group_path,class: "Side-list__iconlist" do
             = icon('fas', 'edit', class: "Side-list__edit")
           = link_to edit_user_path(current_user),class: "Side-list__iconlist" do
             = icon('fas', 'cog', class: "Side-list__cog")
           
     .Side-group
-      .Side-group__name
-        techchamp
-      .Side-group__message
-        まだメッセージがありません
+      - current_user.groups.each do |group|
+        .Group
+          = link_to '#' do
+            .Side-group__name
+              = group.name
+            .Side-group__message
+              メッセージはまだありません
                   
