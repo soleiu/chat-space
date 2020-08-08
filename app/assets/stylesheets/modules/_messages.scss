@@ -40,13 +40,19 @@
     height: calc(100vh - 100px);
     padding: 20px;
     color: #ffffff;
+    text-decoration: none;
     
     &__name {
       font-size: 15px;
+      color: #ffffff;
     }
     &__message {
       font-size: 11px;
       margin:5px 0 0 0;
+      color: #ffffff;
+    }
+    .group {
+      text-decoration: none;
     }
   }
 .Main-chat{
@@ -76,7 +82,7 @@
   font-size: 16px;
   width: 72px;
   height: 40px;
-  display:blck;
+  display: block;
   color:#38aef0; 
   margin-top:28px;
   border: 1px solid#38aef0;
@@ -120,7 +126,7 @@
     display:flex;
     justify-content:space-between;
 
-    .Form__inputbox{
+    .Form__inputbox {
       position: relative;
       width:100%;
       .Form__inputtext {
@@ -139,7 +145,6 @@
         .A{
           display:none;
         }
-        
       }
     }
     .Form__submitBtn {
