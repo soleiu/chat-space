@@ -2,26 +2,23 @@
 .Main-chat
   .Main-chat__Right-header
     .Main-chat__Right-header__groupname
-      techchamp
+      = @group.name
       .Main-chat__Right-header__memberlist
-        sample
-    .Right-header__editbutton
+        - @group.users.each do |user|
+          Member :
+          = user.name
+    = link_to edit_group_path(@group.id), class: "Right-header__editbutton" do
       Edit
+
   .Main-chat__messagebox
-    .Main-chat__messagebox__info
-      .Main-chat__messagebox__info__username
-        sample
-      .Main-chat__messagebox__info__date
-        2020.7.30
-    .Main-chat__messagebox__info__content
-      Hello
-      
+    = render @messages
+   
   .Main-chat__footer
-    %form.Form__contents
+    = form_with model: [@group, @message], html: {class: "Form__contents"}, local: true do |f|
       .Form__inputbox
-        %input.Form__inputtext{"placeholder": "type a message", "type": "text"}
-        %label.Form__inputimage{"placeholder": "type a text", "type": "text"}
+        = f.text_field :content, class: 'Form__inputtext', placeholder: 'type a message'
+        = f.label :image, class: 'Form__inputimage' do
           = icon('fas', 'image', class: "Contents__btn--icon")
-          %input{ "type": "file",class:"A"}
-      %input.Form__submitBtn{"name": "commit", "type": "submit", "value": "Send"}
-      
+          = f.file_field :image, class:"A"
+      = f.submit 'Send', class: 'Form__submitBtn'
+        
