@@ -93,6 +93,7 @@
 .Main-chat__messagebox {
   background-color: #fafafa;
     box-sizing: border-box;
+    margin-bottom: 46px;
     padding: 35px 40px 0;
     height: calc(100vh - 100px - 90px);
     overflow: scroll;
@@ -108,14 +109,23 @@
       font-size: 12px;
       padding-left: 10px;
     }
-    &__content {
-      color: #434a54;
-      font-size: 14px;
-      padding:0 0 0 10px;
-      margin-top: 12px;
+  &__content {
+    color: #434a54;
+    font-size: 14px;
+    margin-top: 12px;
+    display: flex;
     }
   }
 }
+.Message__image {
+  height: 300px;
+}
+.p {
+  display:block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
 .Main-chat__footer {
   height: 90px;
   width: calc(100vw - 300px);
