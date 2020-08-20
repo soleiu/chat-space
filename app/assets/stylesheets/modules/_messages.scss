@@ -37,7 +37,7 @@
      
   .Side-group {
     background-color: #2f3e51;
-    height: calc(100vh - 100px);
+    height: 100vh;
     padding: 20px;
     color: #ffffff;
     text-decoration: none;
@@ -130,7 +130,7 @@
   height: 90px;
   width: calc(100vw - 300px);
   padding: 20px 50px 20px 40px;
-  background-color: #929292;
+  background-color: #dddddd;
   .Form__contents {
     width: 100%;
     display:flex;
