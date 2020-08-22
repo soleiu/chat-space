@@ -37,7 +37,7 @@
      
   .Side-group {
     background-color: #2f3e51;
-    height: 100vh;
+    height: calc(100vh - 100px);
     padding: 20px;
     color: #ffffff;
     text-decoration: none;
