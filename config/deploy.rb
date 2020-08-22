@@ -32,3 +32,5 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+
+arn:aws:iam::725881821212:user/meg
