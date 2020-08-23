@@ -10,17 +10,15 @@ $(function(){
             ${message.created_at}
           </div>
         </div>
-        <div class="Main-chat__messagebox__info">
           <p class="Main-chat__messagebox__info__content">
             ${message.content}
           </p>
           <img class="Message__image" src="${message.image}">
-        </div>
-      </div>`
+        </div>`
       return html;
     } else {
       let html =
-      `<div class="Main-chat__messagebox__info"data-message-id=${message.id}>
+      `<div class="Main-chat__messagebox__info" data-message-id=${message.id}>
           <div class="Main-chat__messagebox__info__username">
             ${message.user_name}
           </div>
@@ -28,18 +26,17 @@ $(function(){
             ${message.created_at}
           </div>
         </div>
-        <div class="Main-chat__messagebox__info">
           <p class="Main-chat__messagebox__info__content">
             ${message.content}
           </p>
-        </div>
-      </div>`
+        </div>`
       return html;
     };
   }
 
   let reloadMessages = function() {
     let last_message_id = $('.Main-chat__messagebox__info:last').data("message-id") || 0;
+    console.log(last_message_id)
     $.ajax({
       url: "api/messages",
       type: 'get',

@@ -6,6 +6,7 @@
 }
 
 .Side-bar{
+  height: 100vh;
   width: 300px;
   .Side-header {
     height: 100px;  
@@ -56,6 +57,7 @@
     }
   }
 .Main-chat{
+  height: 100vh;
   &__Right-header {
     height: 100px;
     width:calc(100vw - 300px);
@@ -93,9 +95,8 @@
 .Main-chat__messagebox {
   background-color: #fafafa;
     box-sizing: border-box;
-    margin-bottom: 46px;
     padding: 35px 40px 0;
-    height: 100vh ;
+    height: calc(100vh - 190px);
     overflow: scroll;
   &__info{
     display:flex;
